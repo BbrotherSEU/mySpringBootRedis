@@ -1,0 +1,34 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: ai
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/ai
+    username: ai
+    password: 123456
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    #    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update # 自动建表
+  h2: # h2的web管理端配置
+    console:
+      enabled: true
+      path: /console
+      settings:
+        trace: false
+        web-allow-others: true
+  # redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 30
+    # password:
+    pool:
+      minIdle: 1
+      maxIdle: 10
+      maxWait: 3
+      maxActive: 8
