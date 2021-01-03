@@ -13,12 +13,12 @@ public class RedisConnectionController {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
     @Autowired
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String, String> redisTemplate;
     private static final Logger logger = LoggerFactory.getLogger(RedisConnectionController.class);
 
     @RequestMapping("getKeys")
     public String getKeys() {
-        logger.info(redisTemplate.keys("*").toString());
+        logger.info("redisTemplate output is: " + redisTemplate.keys("*").toString());
         return stringRedisTemplate.keys("*").toString();
     }
 }
