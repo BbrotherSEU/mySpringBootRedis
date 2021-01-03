@@ -18,7 +18,11 @@ public class RedisConnectionController {
 
     @RequestMapping("getKeys")
     public String getKeys() {
-        logger.info("redisTemplate output is: ", redisTemplate.keys("*").toString());
+        if (redisTemplate.keys("*").size() > 0) {
+            logger.info(String.format("redisTemplate output is: %s", redisTemplate.keys("*").size()));
+        } else {
+            logger.info("no output for redisTemplate");
+        }
         return stringRedisTemplate.keys("*").toString();
     }
 }
