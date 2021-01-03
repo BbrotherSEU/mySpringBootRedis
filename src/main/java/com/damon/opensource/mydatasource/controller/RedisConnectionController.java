@@ -1,5 +1,7 @@
 package com.damon.opensource.mydatasource.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -12,9 +14,11 @@ public class RedisConnectionController {
     private StringRedisTemplate stringRedisTemplate;
     @Autowired
     private RedisTemplate redisTemplate;
+    private static final Logger logger = LoggerFactory.getLogger(RedisConnectionController.class);
+
     @RequestMapping("getKeys")
     public String getKeys() {
-        System.out.println(redisTemplate.keys("*"));
+        logger.info(redisTemplate.keys("*").toString());
         return stringRedisTemplate.keys("*").toString();
     }
 }
