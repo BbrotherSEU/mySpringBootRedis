@@ -1,8 +1,7 @@
-package com.damon.opensource.myDataSource;
+package com.damon.opensource.mydatasource;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 //@SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
 @SpringBootApplication

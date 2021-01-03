@@ -1,4 +1,4 @@
-package com.damon.opensource.myDataSource.config;
+package com.damon.opensource.mydatasource.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

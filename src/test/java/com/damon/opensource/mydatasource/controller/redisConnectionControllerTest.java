@@ -1,4 +1,4 @@
-package com.damon.opensource.myDataSource.controller;
+package com.damon.opensource.mydatasource.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
