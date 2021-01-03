@@ -20,7 +20,8 @@ public class RedisConnectionController {
     @RequestMapping("getKeys")
     public String getKeys() {
         if (!redisTemplate.keys("*").isEmpty()) {
-            logger.info("redisTemplate output is: {}", redisTemplate.keys("*").size());
+            logger.info("redisTemplate output size is: {}", redisTemplate.keys("*").size());
+            redisTemplate.keys("*").forEach(item -> logger.info("redisTemplete output: {}", item));
         } else {
             logger.info("no output for redisTemplate");
         }
