@@ -7,6 +7,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 @RestController
 @RequestMapping("/redis")
 public class RedisConnectionController {
@@ -18,8 +19,8 @@ public class RedisConnectionController {
 
     @RequestMapping("getKeys")
     public String getKeys() {
-        if (redisTemplate.keys("*").size() > 0) {
-            logger.info(String.format("redisTemplate output is: %s", redisTemplate.keys("*").size()));
+        if (!redisTemplate.keys("*").isEmpty()) {
+            logger.info("redisTemplate output is: {}", redisTemplate.keys("*").size());
         } else {
             logger.info("no output for redisTemplate");
         }
