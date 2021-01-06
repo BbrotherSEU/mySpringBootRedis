@@ -17,7 +17,7 @@ spring:
   h2: # h2的web管理端配置
     console:
       enabled: true
-      path: /console
+      path: /h2/console
       settings:
         trace: false
         web-allow-others: true
