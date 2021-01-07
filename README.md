@@ -1,6 +1,3 @@
-[![PyPi Version](https://img.shields.io/pypi/v/mmdnn.svg)](https://pypi.org/project/mmdnn/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Linux](https://travis-ci.org/Microsoft/MMdnn.svg?branch=master)](https://travis-ci.org/Microsoft/MMdnn)
 [![Redis](https://img.shields.io/badge/redis-V6.X-yellow)](http://www.redis.cn/)
 
 # mySpringBootRedis

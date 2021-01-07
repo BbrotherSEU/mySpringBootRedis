@@ -27,8 +27,9 @@ spring:
     port: 6379
     timeout: 30
     # password:
-    pool:
-      minIdle: 1
-      maxIdle: 10
-      maxWait: 3
-      maxActive: 8
+    lettuce:
+      pool:
+        minIdle: 1
+        maxIdle: 10
+        maxWait: 3
+        maxActive: 8
