@@ -4,6 +4,10 @@
 [![Redis](https://img.shields.io/badge/redis-V6.X-yellow)](http://www.redis.cn/)
 
 # mySpringBootRedis
+> This project will include all you need about Spring Boot and New tech.
+
+## how to write README.md
+https://github.com/252590770/GitHub-Flavored-Markdown
 
 ## 1. Integrate with Swagger UI
 
